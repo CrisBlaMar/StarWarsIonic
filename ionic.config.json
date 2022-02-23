@@ -1,0 +1,7 @@
+{
+  "name": "tareaFireBase",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
