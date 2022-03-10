@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title><a routerLink="/home" color="warning">
+      <ion-icon class="icono" name="caret-back-outline"></ion-icon></a>MY CHARACTER'S LIST</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content  color="dark">
+  <ion-card *ngFor="let per of resul" color="warning" (click)="abrirPersonaje(per)">
+    <ion-card-content color="warning">
+      <ion-item button >
+        <ion-text color="dark">
+          <p class="text-dark"><strong>NAME:</strong>  {{per.name}}</p>
+          </ion-text><br>
+        </ion-item>
+        <ion-item>
+          <ion-text color="dark">
+              <p><strong>HEIGHT:</strong> {{per.height}}</p>
+          </ion-text><br>
+        </ion-item>
+        <ion-item>
+        <ion-text color="dark">
+            <p><strong>MASS:</strong> {{per.mass}}</p>
+            </ion-text><br>
+        </ion-item>
+        <ion-item>
+          <ion-text color="dark">
+              <p><strong>GENDER:</strong> {{per.gender}}</p>
+          </ion-text><br>
+        </ion-item>
+        <ion-item>
+          <ion-text color="dark">
+            <p><strong>BIRTHYEAR:</strong> {{per.birth_year}}</p>
+          </ion-text>
+        </ion-item>
+      
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

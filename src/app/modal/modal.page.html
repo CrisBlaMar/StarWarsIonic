@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>M O D I F Y</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+  <div *ngIf="resul">
+    <ion-item>
+      <ion-label position="stacked">Name</ion-label>
+      <ion-input [(ngModel)]="resul.name"></ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label position="stacked">Height</ion-label>
+      <ion-input [(ngModel)]="resul.height"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Mass</ion-label>
+      <ion-input [(ngModel)]="resul.mass"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Gender</ion-label>
+      <ion-input [(ngModel)]="resul.gender"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">BirthYear</ion-label>
+      <ion-input [(ngModel)]="resul.birth_year"></ion-input>
+    </ion-item>
+  </div>
+ 
+  <ion-button expand="block" color="success" (click)="modificarPersonaje()">
+    <ion-icon name="save" slot="start"></ion-icon>
+    Update
+  </ion-button>
+  <ion-button expand="block" color="danger" (click)="borrarPersonaje()">
+    <ion-icon name="trash" slot="start"></ion-icon>
+    Delete
+  </ion-button>
+ 
+</ion-content>

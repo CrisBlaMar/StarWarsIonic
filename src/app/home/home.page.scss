@@ -25,3 +25,22 @@
 #container a {
   text-decoration: none;
 }
+ion-title{
+  font-family: starwars;
+  color: rgb(255, 230, 0);
+}
+h1, h5{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+ion-buttons{
+  text-align: center;
+}
+#search{
+  background-color: #5EC6C9 !important;
+  color: black !important;
+}
+#view{
+  background-color: #CD2347 !important;
+  color: rgb(255, 255, 255) !important;
+}

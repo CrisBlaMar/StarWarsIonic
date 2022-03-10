@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title><a routerLink="/home" color="warning">
+      <ion-icon class="icono" name="caret-back-outline"></ion-icon></a>CHARACTERS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <ion-searchbar color="amarillo" placeholder="Search character..." [value]="buscador" 
+  (ionChange)="mostrarPersonajes($event)"></ion-searchbar>
+
+  <div *ngIf="mostrar" class="preloader"></div>
+
+  <ion-item button *ngFor="let per of resul" [routerLink]="['/detalle-personaje', per]">
+    <ion-label>
+      <ion-text><strong>Name: {{per.name}}</strong></ion-text>
+      <ion-text><p>Birthday: {{per.birth_year}}</p></ion-text>
+      <ion-text><p>Gender: {{per.gender}}</p></ion-text>
+    </ion-label>
+  </ion-item> 
+
+</ion-content>
+  

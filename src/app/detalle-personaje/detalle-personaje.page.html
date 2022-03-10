@@ -1,0 +1,36 @@
+<ion-header *ngIf="mostrar" >
+  <ion-toolbar color="dark">
+    <ion-title><a routerLink="/personajes" color="warning">
+      <ion-icon class="icono" name="caret-back-outline"></ion-icon></a>{{resul.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen *ngIf="mostrar" color="dark">
+  <div>
+    <ion-card color="warning">
+      <ion-card-header>
+        <ion-card-title>{{resul.name}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+          <ion-text color="dark">
+              <p class="text-dark"><b> <strong>NAME:</strong>  {{resul.name}}</b></p>
+          </ion-text>
+          <ion-text color="dark">
+              <p><b><strong>HEIGHT:</strong> {{resul.height}} </b></p>
+          </ion-text>
+          <ion-text color="dark">
+              <p><b><strong>MASS:</strong> {{resul.mass}}</b></p>
+          </ion-text>
+          <ion-text color="dark">
+              <p><b><strong>GENDER:</strong> {{resul.gender}}</b></p>
+          </ion-text>
+          <ion-text color="dark">
+            <p><b><strong>BIRTHYEAR:</strong> {{resul.birth_year}}</b></p>
+        </ion-text>
+      </ion-card-content>
+
+      <ion-button class="btn boton" 
+        (click)="anadirFavorito(resul)">
+      ADD TO MY CHARACTERS LIST</ion-button>
+    </ion-card>
+  </div>
